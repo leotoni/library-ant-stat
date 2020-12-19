@@ -10,19 +10,18 @@ export const Library = observer((props) => {
   const { library, match } = props;
   const [libraryData, setLibrary] = useState({});
 
-  if (library.regionLibraries.length === 0) {
-    return (<Redirect to="/main/home" />);
-  }
-
   useEffect(() => {
     if (match.params.id && library.regionLibraries.length !== 0) {
       const lib = library.libraryData(match.params.id);
-      setLibrary(lib.data);
+      setLibrary(lib && lib.data);
     }
   }, [match.params.id, library.regionLibraries.length]);
 
-  const { source = {} } = libraryData;
+  if (!libraryData || library.regionLibraries.length === 0) {
+    return (<Redirect to="/main/home" />);
+  }
 
+  const { source = {} } = libraryData;
   const {
     address = '',
     email = '',

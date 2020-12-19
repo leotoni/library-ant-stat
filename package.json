@@ -1,7 +1,7 @@
 {
   "name": "library-ant-stat",
   "version": "0.1.0",
-  "proxy": "http://localhost:3080",
+  "proxy": "http://localhost:3001",
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",

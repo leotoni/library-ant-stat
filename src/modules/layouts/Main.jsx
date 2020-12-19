@@ -40,7 +40,7 @@ class Main extends React.Component {
     return (
       <Layout
         style={{
-          height: '100vh',
+          minHeight: '100vh',
         }}
       >
         <Sider

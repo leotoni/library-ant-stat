@@ -59,7 +59,7 @@ export const Home = observer((props) => {
             type="primary"
             size="Large"
           >
-            Open Details
+            Подробнее
           </Button>
         </Row>
       </Card>
